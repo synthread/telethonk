@@ -1,0 +1,22 @@
+name: Release asset
+
+on:
+  release:
+    types:
+      - published
+
+permissions:
+  contents: write
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build HACS archive
+        working-directory: custom_components/telethonk
+        run: zip -r ../../telethonk.zip .
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: telethonk.zip
+

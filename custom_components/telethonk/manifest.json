@@ -1,0 +1,24 @@
+{
+  "codeowners": [
+    "@notkai"
+  ],
+  "config_flow": true,
+  "dependencies": [
+    "http",
+    "panel_custom",
+    "webhook"
+  ],
+  "documentation": "https://github.com/synthread/telethonk",
+  "domain": "telethonk",
+  "integration_type": "service",
+  "iot_class": "cloud_push",
+  "issue_tracker": "https://github.com/synthread/telethonk/issues",
+  "loggers": [
+    "twilio"
+  ],
+  "name": "Telethonk Receptionist",
+  "requirements": [
+    "twilio==6.32.0"
+  ],
+  "version": "0.1.0"
+}

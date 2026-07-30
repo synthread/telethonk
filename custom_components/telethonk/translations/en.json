@@ -1,0 +1,101 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "This Twilio DID is already configured.",
+      "unique_id_mismatch": "The DID does not match this receptionist profile."
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to Twilio.",
+      "invalid_auth": "The Twilio credentials were rejected.",
+      "invalid_options": "Enter at least one notification recipient and use E.164 format for every fallback phone number.",
+      "invalid_phone_number": "Use E.164 format for phone numbers, such as +16045551234."
+    },
+    "step": {
+      "reconfigure": {
+        "data": {
+          "account_sid": "Account SID",
+          "auth_token": "Auth token",
+          "buzzer_number": "Buzzer caller number",
+          "did": "Receptionist DID"
+        },
+        "data_description": {
+          "buzzer_number": "Calls from this E.164 number use the door workflow.",
+          "did": "The active Twilio number receiving calls and messages."
+        },
+        "description": "Update the Twilio credentials and phone-number routing for this receptionist.",
+        "title": "Reconfigure receptionist"
+      },
+      "receptionist": {
+        "data": {
+          "fallback_numbers": "Fallback phone numbers",
+          "notification_recipients": "Actionable notification services",
+          "response_timeout": "Decision timeout",
+          "retention_days": "Interaction retention",
+          "show_sidebar": "Show Receptionist in the sidebar",
+          "sms_acknowledgement": "SMS acknowledgement",
+          "speech_prompt": "Door prompt",
+          "unlock_digits": "Unlock DTMF digits",
+          "unlock_script": "Unlock script override"
+        },
+        "data_description": {
+          "fallback_numbers": "One E.164 number per line. Twilio rings them simultaneously after the decision timeout and for general inbound calls.",
+          "notification_recipients": "One mobile-app notify service per line, with or without the notify. prefix.",
+          "response_timeout": "Seconds to wait for Accept or Deny before bridging the caller.",
+          "retention_days": "Days to retain receptionist transcripts and actions locally.",
+          "sms_acknowledgement": "Reply sent to inbound SMS. Leave empty to send no reply.",
+          "speech_prompt": "What the buzzer caller hears before speech transcription starts.",
+          "unlock_digits": "Digits played into the buzzer call. Use w for a half-second pause.",
+          "unlock_script": "Optional Home Assistant script used instead of Twilio DTMF."
+        },
+        "description": "Configure receptionist routing and behaviour.",
+        "title": "Receptionist options"
+      },
+      "user": {
+        "data": {
+          "account_sid": "Account SID",
+          "auth_token": "Auth token",
+          "buzzer_number": "Buzzer caller number",
+          "did": "Receptionist DID"
+        },
+        "data_description": {
+          "buzzer_number": "Calls from this E.164 number use the door workflow.",
+          "did": "The active Twilio number receiving calls and messages."
+        },
+        "description": "Connect one Twilio DID to a Home Assistant receptionist.",
+        "title": "Add receptionist"
+      }
+    }
+  },
+  "options": {
+    "error": {
+      "invalid_options": "Enter at least one notification recipient and use E.164 format for every fallback phone number."
+    },
+    "step": {
+      "init": {
+        "data": {
+          "fallback_numbers": "Fallback phone numbers",
+          "notification_recipients": "Actionable notification services",
+          "response_timeout": "Decision timeout",
+          "retention_days": "Interaction retention",
+          "show_sidebar": "Show Receptionist in the sidebar",
+          "sms_acknowledgement": "SMS acknowledgement",
+          "speech_prompt": "Door prompt",
+          "unlock_digits": "Unlock DTMF digits",
+          "unlock_script": "Unlock script override"
+        },
+        "data_description": {
+          "fallback_numbers": "One E.164 number per line. Twilio rings them simultaneously after the decision timeout and for general inbound calls.",
+          "notification_recipients": "One mobile-app notify service per line, with or without the notify. prefix.",
+          "response_timeout": "Seconds to wait for Accept or Deny before bridging the caller.",
+          "retention_days": "Days to retain receptionist transcripts and actions locally.",
+          "sms_acknowledgement": "Reply sent to inbound SMS. Leave empty to send no reply.",
+          "speech_prompt": "What the buzzer caller hears before speech transcription starts.",
+          "unlock_digits": "Digits played into the buzzer call. Use w for a half-second pause.",
+          "unlock_script": "Optional Home Assistant script used instead of Twilio DTMF."
+        },
+        "description": "Configure receptionist routing and behaviour.",
+        "title": "Receptionist options"
+      }
+    }
+  }
+}
